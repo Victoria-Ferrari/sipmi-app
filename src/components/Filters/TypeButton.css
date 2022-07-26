@@ -1,0 +1,14 @@
+.type-list a{
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+    font-size: 1.4rem;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.type-list{
+    height: max-content;
+    margin: 10px 0;
+    display: flex;
+    overflow-x: scroll;
+}

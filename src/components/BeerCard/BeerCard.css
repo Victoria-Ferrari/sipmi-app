@@ -1,0 +1,25 @@
+.beerCard{
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    gap: 10px;
+    background-color: #F6F6F6;
+    margin: 10px 5px;
+    border-radius: 5%;
+}
+.beerCard-bg img {
+    width: 100px;
+    /* height: 100px; */
+    border-radius: 50%;
+}
+.beerCard .title{
+    font-weight: 900;
+}
+.beerCard .prod, .type{
+    font-size: 18px;
+    font-weight: normal;
+}
+.beerCard .prod{
+    color: grey;
+}
