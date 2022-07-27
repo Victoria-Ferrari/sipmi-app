@@ -9,3 +9,13 @@
 .card-description{
     margin-bottom: 20px;
 }
+
+.card-description svg {
+    padding-right: 5px;
+    width: 22px;
+}
+.card-description span{
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+}

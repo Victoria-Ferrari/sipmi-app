@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <>
     <div className="header">
-      <h2>SIPMI</h2>
+      <h1>SipMi</h1>
       <SearchBar/>
     </div>
     </>

@@ -4,6 +4,7 @@ import { Header } from "../../components/Header/Header";
 import { Brewscard } from '../../components/BreweriesCard/Brewscard'
 import { ENDPOINT } from '../../libs/breweries'
 
+import './Brewery.css'
 export const Breweries = () => {
     const [breweries, setBreweries] = useState([])
     
@@ -20,7 +21,7 @@ export const Breweries = () => {
     return (
         <main>
             <Header/>
-            <h1>Lista delle birrerie</h1>
+            <h3 className="pageName">Lista delle birrerie</h3>
             {breweries.map(brewery => 
                 <Brewscard key={brewery.id} brewery={brewery}/>
             )}

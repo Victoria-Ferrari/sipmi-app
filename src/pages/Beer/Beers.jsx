@@ -12,7 +12,7 @@ export const Beers = () => {
             const response = await fetch(ENDPOINT + "?populate=*")
             const {data} = await response.json()
             setBeers(data)
-            console.log(data)
+            // console.log(data)
         }
 
         return getBeers
@@ -21,7 +21,7 @@ export const Beers = () => {
     return (
         <main >
             <Header />
-            <h3>Cerca per tipo</h3>
+            {/* <h3>Cerca per tipo</h3> */}
             <Types/>
             <h3>La lista delle birre</h3>
             {beers.map(beer => 
