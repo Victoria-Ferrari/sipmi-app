@@ -31,12 +31,9 @@ span, p, h3{
     font-family: "Poppins-normal", sans-serif;
     font-size: 18px;
 }
-/* .app{
-    height: 120vh;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-} */
 main{
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
+}
+body{
+    margin-bottom: 20vh;
 }

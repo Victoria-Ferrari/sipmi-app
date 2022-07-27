@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-
+import { Header } from '../../components/Header/Header'
 import { Beercard } from "../../components/BeerCard/Beercard"
 import { Types } from "../../components/Filters/Types";
 import { ENDPOINT } from '../../libs/beers'
@@ -21,8 +20,10 @@ export const Beers = () => {
 
     return (
         <main >
+            <Header />
+            <h3>Cerca per tipo</h3>
             <Types/>
-            <h1>Pagina BBBBBIRRETTE</h1>
+            <h3>La lista delle birre</h3>
             {beers.map(beer => 
                 <Beercard key={beer.id} beer={beer}/>
             )}

@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-
+import { Header } from "../../components/Header/Header";
 import { Brewscard } from '../../components/BreweriesCard/Brewscard'
 import { ENDPOINT } from '../../libs/breweries'
 
@@ -20,11 +19,11 @@ export const Breweries = () => {
 
     return (
         <main>
-            <h1>Pagina BBBBirrerie</h1>
+            <Header/>
+            <h1>Lista delle birrerie</h1>
             {breweries.map(brewery => 
                 <Brewscard key={brewery.id} brewery={brewery}/>
             )}
-            <Link to="/map">Map</Link>
         </main>
     )
 }

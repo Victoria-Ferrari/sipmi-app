@@ -1,7 +1,11 @@
-/* img{
-    width: 100%;
-    height: auto;
-} */
 .brewscard-cover{
     border-radius: 5px;
+}
+.card-description h3{
+    font-size: 1.2rem;
+    padding: 5px 0 0 0;
+}
+
+.card-description{
+    margin-bottom: 20px;
 }

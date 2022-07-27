@@ -8,7 +8,7 @@ import { Brewery } from "./pages/Breweries/Brewery"
 import { Type } from "./pages/Type"
 
 /* components */
-import { Header } from "./components/Header";
+import { Header } from "./components/Header/Header";
 import { Navbar } from "./components/Navbar/Navbar";
 /* css */
 import './App.css'
@@ -16,8 +16,6 @@ import './App.css'
 export const App = () => {
   return (      
     <>
-      <Header />
-
       {/* Routes app */}
       <Routes>
         <Route path="/" element={<Breweries />} />

@@ -34,7 +34,7 @@
     font-weight: 700;
     font-style: bold;
 }
-
+/* basic styling */
 h1{
     font-family: "Druk-CondSuper", sans-serif;
     font-style: 2rem;
@@ -48,8 +48,4 @@ h2{
 body{
     font-family: "Poppins-normal", sans-serif;
     font-size: 18px;
-}
-main{
-    padding: 40px;
-    margin-bottom: 20vh;
 }

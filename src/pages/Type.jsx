@@ -1,14 +1,12 @@
 /* Pagina categoria di birra singola -> card birre associate */
 import React from "react";
-import { useParams } from 'react-router-dom' /* lavora con il router, restituisce un oggetto (coppia chiave valore) dei parametri dinamici dell'url abbinati al router path */
+import { useParams } from 'react-router-dom' 
 
 import { useEffect, useState } from 'react'
-
 import { Beercard } from "../components/BeerCard/Beercard";
 import { BackButton } from "../components/BackButton/BackButton";
 
-// import { ENDPOINT } from '../libs/types'
-
+import '../components/Filters/TypeButton.css'
 export const Type = () => {
     const [type, setType] = useState()
     const params = useParams()
@@ -27,21 +25,17 @@ export const Type = () => {
 
     return (
         <>
-        <BackButton/>
-        {type &&
-        <main>
-            
-            <h1>Pagina tipo singolo</h1>
-            <div className="list-beers">
-                {type.attributes.beers.data.map(beer => 
-                        <Beercard key={beer.id} beer={beer}/>
-                    )}
-            </div>
-            {/* {type.attributes.beers.data.map(beer => 
-                <Beercard key={beer.id} beer={beer}/>
-            )} */}
-            {console.log(type)}
-        </main>
+            <BackButton/>
+            {type &&
+                <main>
+                    <h3>Tipo: {type.attributes.beer_type}</h3>
+                    <div className="list-beers">
+                        {type.attributes.beers.data.map(beer => 
+                            <Beercard key={beer.id} beer={beer}/>
+                        )}
+                    </div>
+                    {/* {console.log(type)} */}
+                </main>
             }
         </>
     )

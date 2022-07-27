@@ -22,12 +22,10 @@ export const Brewery = () => {
         return getBrewery
     }, []) 
     return(
-        
         <>
-            <BackButton url="/" />
-            <main>
+            
             {brewery &&
-                <div>
+                <div><BackButton url="/" />
                     <div className='brew-header'>
                         <div className="brewery-cover"
                             style={{
@@ -47,15 +45,20 @@ export const Brewery = () => {
                             <img src={`http://localhost:1337${brewery.attributes.logo.data.attributes.url}`} alt=""/>
                         </div>
                     </div>
+                    <main>
+                    <div className="findAdd-menu">
+                        <ul>
+                        <a className='MapButton' href={brewery.attributes.map}>Mappa</a>
+                        </ul>
+                    </div>
                     <div className='taplist'>
                         <h2>Taplist</h2>
                         {brewery.attributes.beers.data.map(beer =>
                             <Beercard key={beer.id} beer={beer}/>
                         )}
-
-                    </div>
+                    </div></main>
                </div>   
-            }</main>
+            }
         </>
     )
 }

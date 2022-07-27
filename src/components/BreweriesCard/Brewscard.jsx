@@ -17,12 +17,8 @@ export const Brewscard = ({brewery}) => {
               backgroundRepeat: 'no-repeat'
             }}>
           </div>
-          <h2>{brewery.attributes.name}</h2>
+          <h3>{brewery.attributes.name}</h3>
           <span>{brewery.attributes.address}</span>
- 
-            {/* 
-              READ MORE - READ LESS
-              https://stackoverflow.com/questions/40255345/maximum-amount-of-characters-in-a-div-paragraph-tag-in-react*/}
         </div>    
       </Link>
     </>

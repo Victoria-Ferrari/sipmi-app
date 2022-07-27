@@ -16,8 +16,6 @@ export const Types = () => {
    
     return(
         <>
-        <h2>type list</h2>
-
         <div className='type-list'>
             {
                 types.map(type=>

@@ -12,9 +12,9 @@ export const Beercard = ({beer}) => {
                     <img src={`${beer.attributes.Image_url}`} alt="" />
                 </div>
                 <h2 className="beerCard-info">
-                    <span className="title">{beer.attributes.name}</span><br/>
-                    <span className="prod">birrificio di produzione</span><br />
-                    {/* <span className="type">{beer.attributes.tipo.data.attributes.beer_type}</span> */}
+                    <h3 className="title">{beer.attributes.name}</h3>
+                    <h3 className="type">{beer.attributes.type}</h3>
+                    <h3 className="prod">{beer.attributes.brew_house}</h3>
                 </h2>
             </div>
         </Link>

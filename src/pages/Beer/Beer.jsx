@@ -28,7 +28,7 @@ export const Beer = () => {
             <>
                 <div className="beer-cover">
                     <h1>{beer.attributes.name}</h1>
-                    <h2>{beer.attributes.tipo.data.attributes.beer_type}</h2>
+                    <h2>{beer.attributes.type}</h2>
 
                     <div className='beer-info'>
                         <h2 className='tac'>{beer.attributes.density}°P</h2>
