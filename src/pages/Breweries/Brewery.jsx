@@ -9,8 +9,6 @@ export const Brewery = () => {
     const [brewery, setBrewery] = useState()
     const params = useParams()
 
-    // const [beers, setBeers] = useState([])
-
     useEffect(() => {
         const getBrewery = async () => {
             const response = await fetch(`http://localhost:1337/api/breweries/${params.id}?populate=*`)
@@ -18,12 +16,11 @@ export const Brewery = () => {
 
             setBrewery(data)
         }
-        
         return getBrewery
     }, []) 
+
     return(
         <>
-            
             {brewery &&
                 <div><BackButton url="/" />
                     <div className='brew-header'>
@@ -45,18 +42,18 @@ export const Brewery = () => {
                             <img src={`http://localhost:1337${brewery.attributes.logo.data.attributes.url}`} alt=""/>
                         </div>
                     </div>
+                        <div className="findAdd-menu">
+                                <a href={brewery.attributes.map}>Mappa</a>
+                                <button>Salva in lista</button>
+                        </div>
                     <main>
-                    <div className="findAdd-menu">
-                        <ul>
-                        <a className='MapButton' href={brewery.attributes.map}>Mappa</a>
-                        </ul>
-                    </div>
-                    <div className='taplist'>
-                        <h2>Taplist</h2>
-                        {brewery.attributes.beers.data.map(beer =>
-                            <Beercard key={beer.id} beer={beer}/>
-                        )}
-                    </div></main>
+                        <div className='taplist'>
+                            <h2>Taplist</h2>
+                            {brewery.attributes.beers.data.map(beer =>
+                                <Beercard key={beer.id} beer={beer}/>
+                            )}
+                        </div>
+                    </main>
                </div>   
             }
         </>
